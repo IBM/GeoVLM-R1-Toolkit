@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.ipynb_checkpoints/
+
+# Environments / IDE
+.env
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+
+# Data, weights and outputs (not distributed with this repository)
+GeoVLM_R1_dataset/
+GeoVLM_Bench/
+GeoVLM_weights/
+GeoVLM_R1_Models/
+GeoVLM_VLM_R1_Results/
+nltk_data/
+wandb/
+runs/
+debug_log_*.txt
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt

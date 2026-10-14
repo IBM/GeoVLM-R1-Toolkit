@@ -1,23 +1,11 @@
-language: ruby
+# Lightweight CI: checks that all Python files compile and all shell scripts parse.
+# (Training/inference need GPUs and are not run in CI.)
+language: python
+python:
+  - "3.11"
 
-before_install:
-  - echo "#"
-  - echo "#"
-  - echo "TravisCI is unbelively powerful, but you need to do your research first."
-  - echo "#"
-  - echo "#"
+install: skip
 
 script:
-  - echo "#"
-  - echo "#"
-  - echo "Please take a look https://docs.travis-ci.com/user/tutorial/ for you options."
-  - echo "#"
-  - echo "#"
-
-
-after_success:
-  - echo "#"
-  - echo "#"
-  - echo "Don't forget to enable it in the GitHub repository also.."
-  - echo "#"
-  - echo "#"
+  - python -m compileall -q GeoVLM_Eval GeoVLM_inference train
+  - for f in $(find . -name '*.sh' -not -path './.git/*'); do bash -n "$f" || exit 1; done
