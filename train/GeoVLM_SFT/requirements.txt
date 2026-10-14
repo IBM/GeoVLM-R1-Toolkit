@@ -103,7 +103,7 @@ typing_extensions==4.13.2
 typing-inspection==0.4.0
 tzdata==2025.2
 ujson==5.10.0
-urllib3==2.4.0
+urllib3==2.8.0
 wandb==0.19.10
 wcwidth==0.2.13
 wheel==0.45.1
