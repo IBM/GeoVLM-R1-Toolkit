@@ -63,7 +63,7 @@ parso==0.8.4
 peft==0.21.2
 pexpect==4.9.0
 pickleshare==0.7.5
-pillow==12.3.0
+pillow==13.0.0
 pip==26.2
 platformdirs==4.3.7
 prompt_toolkit==3.0.51
